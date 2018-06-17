@@ -25,7 +25,7 @@ class PCMailer_Mailer_Lists extends PageCarton_Table
      *
      * @param string
      */
-    protected $_tableVersion = '0.0';  
+    protected $_tableVersion = '0.0';    
 
     /**
      * Table data types and declaration
