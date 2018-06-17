@@ -38,7 +38,7 @@ application/documents/layout/*/theme/data-backup/*
 *.zip
 
 # 
-application/databases/Application/Log/View/*
+#application/databases/Application/Log/*
 application/pages/data-backup/*
 application/sub_domain/* 
 application/databases/Ayoola/Access/localuser.xml
