@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DOCUMENT_ELEMENT table_name="log" creation_time="1529238381" modified_time="1529238381" table_version="0.04" module_version="1.00" table_class="Application_Log_View_Access_Log" creation_ip="2130706433">
+  <RECORDS autoId="15">
+    <TABLE_ROW ROW_ID="1">
+      <TABLE_FIELD FIELD_KEY="uri"><![CDATA[/]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="http_referer"><![CDATA[]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="NPS"><![CDATA[584]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="ip"><![CDATA[127.0.0.1]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="http_host"><![CDATA[localhost]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="http_user_agent"><![CDATA[Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="request_method"><![CDATA[GET]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="request_time"><![CDATA[2018-06-17 12:26:20]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="total_run_time"><![CDATA[1.00]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="user_id"><![CDATA[1506996157.6546]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="request"><![CDATA[[]]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="log_id"><![CDATA[0-0-1]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="creation_time"><![CDATA[1529238381]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="modified_time"><![CDATA[]]></TABLE_FIELD>
+    </TABLE_ROW>
+    <TABLE_ROW ROW_ID="2">
+      <TABLE_FIELD FIELD_KEY="uri"><![CDATA[Application_Article_ShowAll]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="http_referer"><![CDATA[http://localhost/mailer/]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="NPS"><![CDATA[585]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="ip"><![CDATA[127.0.0.1]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="http_host"><![CDATA[localhost]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="http_user_agent"><![CDATA[Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="request_method"><![CDATA[GET]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="request_time"><![CDATA[2018-06-17 12:26:33]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="total_run_time"><![CDATA[1.00]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="user_id"><![CDATA[1506996157.6546]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="request"><![CDATA[[]]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="log_id"><![CDATA[0-0-2]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="creation_time"><![CDATA[1529238393]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="modified_time"><![CDATA[]]></TABLE_FIELD>
+    </TABLE_ROW>
+    <TABLE_ROW ROW_ID="3">
+      <TABLE_FIELD FIELD_KEY="uri"><![CDATA[/pc-admin]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="http_referer"><![CDATA[http://localhost/mailer/]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="NPS"><![CDATA[586]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="ip"><![CDATA[127.0.0.1]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="http_host"><![CDATA[localhost]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="http_user_agent"><![CDATA[Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="request_method"><![CDATA[GET]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="request_time"><![CDATA[2018-06-17 12:27:58]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="total_run_time"><![CDATA[1.00]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="user_id"><![CDATA[1506996157.6546]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="request"><![CDATA[[]]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="log_id"><![CDATA[0-0-3]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="creation_time"><![CDATA[1529238478]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="modified_time"><![CDATA[]]></TABLE_FIELD>
+    </TABLE_ROW>
+    <TABLE_ROW ROW_ID="4">
+      <TABLE_FIELD FIELD_KEY="uri"><![CDATA[/pc-admin]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="http_referer"><![CDATA[]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="NPS"><![CDATA[587]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="ip"><![CDATA[127.0.0.1]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="http_host"><![CDATA[localhost]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="http_user_agent"><![CDATA[Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="request_method"><![CDATA[GET]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="request_time"><![CDATA[2018-06-17 12:28:49]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="total_run_time"><![CDATA[1.00]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="user_id"><![CDATA[1506996157.6546]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="request"><![CDATA[[]]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="log_id"><![CDATA[0-0-4]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="creation_time"><![CDATA[1529238529]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="modified_time"><![CDATA[]]></TABLE_FIELD>
+    </TABLE_ROW>
+    <TABLE_ROW ROW_ID="5">
+      <TABLE_FIELD FIELD_KEY="uri"><![CDATA[/pc-admin/name/Application_Cache_Clear]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="http_referer"><![CDATA[http://localhost/mailer/pc-admin]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="NPS"><![CDATA[588]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="ip"><![CDATA[127.0.0.1]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="http_host"><![CDATA[localhost]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="http_user_agent"><![CDATA[Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="request_method"><![CDATA[GET]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="request_time"><![CDATA[2018-06-17 12:29:09]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="total_run_time"><![CDATA[1.00]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="user_id"><![CDATA[1506996157.6546]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="request"><![CDATA[[]]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="log_id"><![CDATA[0-0-5]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="creation_time"><![CDATA[1529238549]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="modified_time"><![CDATA[]]></TABLE_FIELD>
+    </TABLE_ROW>
+    <TABLE_ROW ROW_ID="6">
+      <TABLE_FIELD FIELD_KEY="uri"><![CDATA[/pc-admin/name/Ayoola_Object_List]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="http_referer"><![CDATA[http://localhost/mailer/pc-admin/name/Application_Cache_Clear/]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="NPS"><![CDATA[592]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="ip"><![CDATA[127.0.0.1]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="http_host"><![CDATA[localhost]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="http_user_agent"><![CDATA[Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="request_method"><![CDATA[GET]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="request_time"><![CDATA[2018-06-17 12:31:46]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="total_run_time"><![CDATA[1.00]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="user_id"><![CDATA[1506996157.6546]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="request"><![CDATA[[]]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="log_id"><![CDATA[0-0-6]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="creation_time"><![CDATA[1529238706]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="modified_time"><![CDATA[]]></TABLE_FIELD>
+    </TABLE_ROW>
+    <TABLE_ROW ROW_ID="7">
+      <TABLE_FIELD FIELD_KEY="uri"><![CDATA[Ayoola_Object_CreateFile]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="http_referer"><![CDATA[http://localhost/mailer/pc-admin/name/Ayoola_Object_List/]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="NPS"><![CDATA[593]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="ip"><![CDATA[127.0.0.1]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="http_host"><![CDATA[localhost]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="http_user_agent"><![CDATA[Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="request_method"><![CDATA[GET]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="request_time"><![CDATA[2018-06-17 12:32:25]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="total_run_time"><![CDATA[1.00]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="user_id"><![CDATA[1506996157.6546]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="request"><![CDATA[[]]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="log_id"><![CDATA[0-0-7]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="creation_time"><![CDATA[1529238746]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="modified_time"><![CDATA[]]></TABLE_FIELD>
+    </TABLE_ROW>
+    <TABLE_ROW ROW_ID="8">
+      <TABLE_FIELD FIELD_KEY="uri"><![CDATA[Ayoola_Object_CreateFile]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="http_referer"><![CDATA[http://localhost/mailer/tools/classplayer/get/object_name/Ayoola_Object_CreateFile/]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="NPS"><![CDATA[594]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="ip"><![CDATA[127.0.0.1]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="http_host"><![CDATA[localhost]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="http_user_agent"><![CDATA[Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="request_method"><![CDATA[POST]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="request_time"><![CDATA[2018-06-17 12:32:52]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="total_run_time"><![CDATA[1.00]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="user_id"><![CDATA[1506996157.6546]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="request"><![CDATA[{&quot;bb723d9731c13fba20861b802560&quot;:&quot;PageCarton_Mailer&quot;,&quot;cb068c09a351c4e38ed97cae534f2&quot;:&quot;Mailer&quot;,&quot;f8f34d7c366e1a19d03b182935a1b7&quot;:&quot;Ayoola_Object_CreateFile&quot;,&quot;a2ce3933391afff94f240e181f4f8ad0&quot;:&quot;&quot;}]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="log_id"><![CDATA[0-0-8]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="creation_time"><![CDATA[1529238772]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="modified_time"><![CDATA[]]></TABLE_FIELD>
+    </TABLE_ROW>
+    <TABLE_ROW ROW_ID="9">
+      <TABLE_FIELD FIELD_KEY="uri"><![CDATA[Ayoola_Object_CreateFile]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="http_referer"><![CDATA[http://localhost/mailer/pc-admin/name/Ayoola_Object_List/]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="NPS"><![CDATA[595]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="ip"><![CDATA[127.0.0.1]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="http_host"><![CDATA[localhost]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="http_user_agent"><![CDATA[Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="request_method"><![CDATA[GET]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="request_time"><![CDATA[2018-06-17 12:33:04]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="total_run_time"><![CDATA[1.00]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="user_id"><![CDATA[1506996157.6546]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="request"><![CDATA[[]]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="log_id"><![CDATA[0-0-9]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="creation_time"><![CDATA[1529238784]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="modified_time"><![CDATA[]]></TABLE_FIELD>
+    </TABLE_ROW>
+    <TABLE_ROW ROW_ID="10">
+      <TABLE_FIELD FIELD_KEY="uri"><![CDATA[Ayoola_Object_CreateFile]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="http_referer"><![CDATA[http://localhost/mailer/pc-admin/name/Ayoola_Object_List/]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="NPS"><![CDATA[596]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="ip"><![CDATA[127.0.0.1]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="http_host"><![CDATA[localhost]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="http_user_agent"><![CDATA[Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="request_method"><![CDATA[GET]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="request_time"><![CDATA[2018-06-17 12:35:16]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="total_run_time"><![CDATA[1.00]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="user_id"><![CDATA[1506996157.6546]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="request"><![CDATA[[]]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="log_id"><![CDATA[0-0-10]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="creation_time"><![CDATA[1529238916]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="modified_time"><![CDATA[]]></TABLE_FIELD>
+    </TABLE_ROW>
+    <TABLE_ROW ROW_ID="11">
+      <TABLE_FIELD FIELD_KEY="uri"><![CDATA[Ayoola_Object_CreateFile]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="http_referer"><![CDATA[http://localhost/mailer/tools/classplayer/get/object_name/Ayoola_Object_CreateFile/?file_type=table]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="NPS"><![CDATA[597]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="ip"><![CDATA[127.0.0.1]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="http_host"><![CDATA[localhost]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="http_user_agent"><![CDATA[Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="request_method"><![CDATA[POST]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="request_time"><![CDATA[2018-06-17 12:39:41]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="total_run_time"><![CDATA[1.00]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="user_id"><![CDATA[1506996157.6546]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="request"><![CDATA[{&quot;bb723d9731c13fba20861b802560&quot;:&quot;PageCarton_Mailer_Lists&quot;,&quot;fields&quot;:[&quot;list_title&quot;],&quot;datatypes&quot;:[&quot;INPUTTEXT&quot;],&quot;f8f34d7c366e1a19d03b182935a1b7&quot;:&quot;Ayoola_Object_CreateFile&quot;,&quot;a2ce3933391afff94f240e181f4f8ad0&quot;:&quot;&quot;}]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="log_id"><![CDATA[0-0-11]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="creation_time"><![CDATA[1529239181]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="modified_time"><![CDATA[]]></TABLE_FIELD>
+    </TABLE_ROW>
+    <TABLE_ROW ROW_ID="12">
+      <TABLE_FIELD FIELD_KEY="uri"><![CDATA[Ayoola_Object_CreateFile]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="http_referer"><![CDATA[http://localhost/mailer/pc-admin/name/Ayoola_Object_List/]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="NPS"><![CDATA[598]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="ip"><![CDATA[127.0.0.1]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="http_host"><![CDATA[localhost]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="http_user_agent"><![CDATA[Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="request_method"><![CDATA[GET]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="request_time"><![CDATA[2018-06-17 12:39:55]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="total_run_time"><![CDATA[1.00]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="user_id"><![CDATA[1506996157.6546]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="request"><![CDATA[[]]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="log_id"><![CDATA[0-0-12]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="creation_time"><![CDATA[1529239195]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="modified_time"><![CDATA[]]></TABLE_FIELD>
+    </TABLE_ROW>
+    <TABLE_ROW ROW_ID="13">
+      <TABLE_FIELD FIELD_KEY="uri"><![CDATA[Ayoola_Object_CreateFile]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="http_referer"><![CDATA[http://localhost/mailer/tools/classplayer/get/object_name/Ayoola_Object_CreateFile/?file_type=table]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="NPS"><![CDATA[599]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="ip"><![CDATA[127.0.0.1]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="http_host"><![CDATA[localhost]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="http_user_agent"><![CDATA[Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="request_method"><![CDATA[POST]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="request_time"><![CDATA[2018-06-17 12:44:40]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="total_run_time"><![CDATA[1.00]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="user_id"><![CDATA[1506996157.6546]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="request"><![CDATA[{&quot;bb723d9731c13fba20861b802560&quot;:&quot;Contacts&quot;,&quot;fields&quot;:[&quot;firstname&quot;,&quot;lastname&quot;,&quot;email&quot;,&quot;enabled&quot;,&quot;verified&quot;,&quot;confirmed&quot;,&quot;lists_id&quot;,&quot;unsubscribed&quot;,&quot;bounced&quot;],&quot;datatypes&quot;:[&quot;INPUTTEXT&quot;,&quot;INPUTTEXT&quot;,&quot;INPUTTEXT&quot;,&quot;INT&quot;,&quot;INT&quot;,&quot;INPUTTEXT&quot;,&quot;JSON&quot;,&quot;INT&quot;,&quot;INT&quot;],&quot;f8f34d7c366e1a19d03b182935a1b7&quot;:&quot;Ayoola_Object_CreateFile&quot;,&quot;a2ce3933391afff94f240e181f4f8ad0&quot;:&quot;&quot;}]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="log_id"><![CDATA[0-0-13]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="creation_time"><![CDATA[1529239480]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="modified_time"><![CDATA[]]></TABLE_FIELD>
+    </TABLE_ROW>
+    <TABLE_ROW ROW_ID="14">
+      <TABLE_FIELD FIELD_KEY="uri"><![CDATA[/widgets/Contacts_List]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="http_referer"><![CDATA[http://localhost/mailer/pc-admin/name/Ayoola_Object_List/]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="NPS"><![CDATA[600]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="ip"><![CDATA[127.0.0.1]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="http_host"><![CDATA[localhost]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="http_user_agent"><![CDATA[Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="request_method"><![CDATA[GET]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="request_time"><![CDATA[2018-06-17 12:45:33]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="total_run_time"><![CDATA[1.00]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="user_id"><![CDATA[1506996157.6546]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="request"><![CDATA[[]]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="log_id"><![CDATA[0-0-14]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="creation_time"><![CDATA[1529239534]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="modified_time"><![CDATA[]]></TABLE_FIELD>
+    </TABLE_ROW>
+  </RECORDS>
+  <TABLE_SETTINGS>
+    <DATA_TYPES uri="INPUTTEXT" http_referer="INPUTTEXT" NPS="INPUTTEXT" ip="INPUTTEXT" http_host="INPUTTEXT" http_user_agent="INPUTTEXT" request_method="INPUTTEXT" request_time="INPUTTEXT" total_run_time="INPUTTEXT" user_id="INPUTTEXT" request="JSON" log_id="INPUTTEXT" creation_time="INPUTTEXT" modified_time="INPUTTEXT"/>
+    <FOREIGN_KEYS/>
+    <RELATIVES/>
+  </TABLE_SETTINGS>
+</DOCUMENT_ELEMENT>
