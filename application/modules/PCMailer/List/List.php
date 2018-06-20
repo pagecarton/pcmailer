@@ -6,7 +6,7 @@
  * LICENSE
  *
  * @category   PageCarton CMS
- * @package    PageCarton_Mailer_Lists_List
+ * @package    PCMailer_List_List
  * @copyright  Copyright (c) 2017 PageCarton (http://www.pagecarton.org)
  * @license    GNU General Public License version 2 or later; see LICENSE.txt
  * @version    $Id: List.php Wednesday 20th of December 2017 03:21PM ayoola@ayoo.la $
@@ -16,7 +16,7 @@
  * @see PageCarton_Widget
  */
 
-class PageCarton_Mailer_Lists_List extends PageCarton_Mailer_Lists_Abstract
+class PCMailer_List_List extends PCMailer_List_Abstract
 {
     /**
      * Performs the creation process
@@ -53,8 +53,8 @@ class PageCarton_Mailer_Lists_List extends PageCarton_Mailer_Lists_Abstract
 			array(
                     'list_title' => array( 'field' => 'list_title', 'value' =>  '%FIELD%', 'filter' =>  '' ), 
                     'Added' => array( 'field' => 'creation_time', 'value' =>  '%FIELD%', 'filter' =>  'Ayoola_Filter_Time' ), 
-                    '' => '%FIELD% <a style="font-size:smaller;" rel="shadowbox;changeElementId=' . $this->getObjectName() . '" href="' . Ayoola_Application::getUrlPrefix() . '/tools/classplayer/get/object_name/PageCarton_Mailer_Lists_Editor/?' . $this->getIdColumn() . '=%KEY%">edit</a>', 
-                    ' ' => '%FIELD% <a style="font-size:smaller;" rel="shadowbox;changeElementId=' . $this->getObjectName() . '" href="' . Ayoola_Application::getUrlPrefix() . '/tools/classplayer/get/object_name/PageCarton_Mailer_Lists_Delete/?' . $this->getIdColumn() . '=%KEY%">x</a>', 
+                    '' => '%FIELD% <a style="font-size:smaller;" rel="shadowbox;changeElementId=' . $this->getObjectName() . '" href="' . Ayoola_Application::getUrlPrefix() . '/tools/classplayer/get/object_name/PCMailer_List_Editor/?' . $this->getIdColumn() . '=%KEY%">edit</a>', 
+                    ' ' => '%FIELD% <a style="font-size:smaller;" rel="shadowbox;changeElementId=' . $this->getObjectName() . '" href="' . Ayoola_Application::getUrlPrefix() . '/tools/classplayer/get/object_name/PCMailer_List_Delete/?' . $this->getIdColumn() . '=%KEY%">x</a>', 
 				)
 		);
 		return $list;

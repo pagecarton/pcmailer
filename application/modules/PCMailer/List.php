@@ -6,10 +6,10 @@
  * LICENSE
  *
  * @category   PageCarton CMS
- * @package    PCMailer_Mailer_Lists
+ * @package    PCMailer_List
  * @copyright  Copyright (c) 2018 PageCarton (http://www.pagecarton.org)
  * @license    GNU General Public License version 2 or later; see LICENSE.txt
- * @version    $Id: Lists.php Sunday 17th of June 2018 12:39PM ayoola@ayoo.la $
+ * @version    $Id: List.php Sunday 17th of June 2018 12:39PM ayoola@ayoo.la $
  */
 
 /**
@@ -17,7 +17,7 @@
  */
 
 
-class PCMailer_Mailer_Lists extends PageCarton_Table
+class PCMailer_List extends PageCarton_Table
 {
 
     /**

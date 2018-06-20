@@ -6,7 +6,7 @@
  * LICENSE
  *
  * @category   PageCarton CMS
- * @package    PageCarton_Mailer_Lists_Creator
+ * @package    PCMailer_Campaign_Creator
  * @copyright  Copyright (c) 2017 PageCarton (http://www.pagecarton.org)
  * @license    GNU General Public License version 2 or later; see LICENSE.txt
  * @version    $Id: Creator.php Wednesday 20th of December 2017 03:23PM ayoola@ayoo.la $
@@ -16,7 +16,7 @@
  * @see PageCarton_Widget
  */
 
-class PageCarton_Mailer_Lists_Creator extends PageCarton_Mailer_Lists_Abstract
+class PCMailer_Campaign_Creator extends PCMailer_Campaign_Abstract
 {
 	
     /**

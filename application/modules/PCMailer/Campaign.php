@@ -6,10 +6,10 @@
  * LICENSE
  *
  * @category   PageCarton CMS
- * @package    PCMailer_Contacts
+ * @package    PCMailer_Campaign
  * @copyright  Copyright (c) 2018 PageCarton (http://www.pagecarton.org)
  * @license    GNU General Public License version 2 or later; see LICENSE.txt
- * @version    $Id: Contacts.php Sunday 17th of June 2018 12:44PM ayoola@ayoo.la $
+ * @version    $Id: Campaign.php Sunday 17th of June 2018 02:10PM ayoola@ayoo.la $
  */
 
 /**
@@ -17,7 +17,7 @@
  */
 
 
-class PCMailer_Contacts extends PageCarton_Table
+class PCMailer_Campaign extends PageCarton_Table
 {
 
     /**
@@ -25,7 +25,7 @@ class PCMailer_Contacts extends PageCarton_Table
      *
      * @param string
      */
-    protected $_tableVersion = '0.0';  
+    protected $_tableVersion = '0.4';  
 
     /**
      * Table data types and declaration
@@ -34,15 +34,16 @@ class PCMailer_Contacts extends PageCarton_Table
      * @param array
      */
 	protected $_dataTypes = array (
-  'firstname' => 'INPUTTEXT',
-  'lastname' => 'INPUTTEXT',
-  'email' => 'INPUTTEXT',
-  'enabled' => 'INT',
-  'verified' => 'INT',
-  'confirmed' => 'INPUTTEXT',
-  'lists_id' => 'JSON',
-  'unsubscribed' => 'INT',
-  'bounced' => 'INT',
+  'from' => 'INPUTTEXT',
+  'subject' => 'INPUTTEXT',
+  'sent' => 'JSON',
+  'opened' => 'JSON',
+  'clicked' => 'JSON',
+  'status' => 'INT',
+  'last_runtime' => 'INT',
+  'unsubscribes' => 'JSON',
+  'body' => 'TEXTAREA',
+  'list_id' => 'INPUTTEXT',
 );
 
 

@@ -6,17 +6,17 @@
  * LICENSE
  *
  * @category   PageCarton CMS
- * @package    PageCarton_Mailer_Lists_Delete
+ * @package    PCMailer_Contact_Editor
  * @copyright  Copyright (c) 2017 PageCarton (http://www.pagecarton.org)
  * @license    GNU General Public License version 2 or later; see LICENSE.txt
- * @version    $Id: Delete.php Wednesday 20th of December 2017 08:14PM ayoola@ayoo.la $
+ * @version    $Id: Editor.php Wednesday 20th of December 2017 08:14PM ayoola@ayoo.la $
  */
 
 /**
  * @see PageCarton_Widget
  */
 
-class PageCarton_Mailer_Lists_Delete extends PageCarton_Mailer_Lists_Abstract
+class PCMailer_Contact_Editor extends PCMailer_Contact_Abstract
 {
 
     /**
@@ -29,11 +29,13 @@ class PageCarton_Mailer_Lists_Delete extends PageCarton_Mailer_Lists_Abstract
 		{ 
             //  Code that runs the widget goes here...
 			if( ! $data = $this->getIdentifierData() ){ return false; }
-			$this->createConfirmationForm( 'Delete', 'Delete' );
+			$this->createForm( 'Save', 'Edit', $data );
 			$this->setViewContent( $this->getForm()->view(), true );
 			if( ! $values = $this->getForm()->getValues() ){ return false; }
-            
-			if( $this->deleteDb() ){ $this->setViewContent( '<div class="goodnews">Data deleted successfully</div>', true ); } 
+            $values['email'] = strtolower( $values['email'] );
+
+
+			if( $this->updateDb( $values ) ){ $this->setViewContent( '<div class="goodnews">Data updated successfully</div>', true ); } 
 
              // end of widget process
           

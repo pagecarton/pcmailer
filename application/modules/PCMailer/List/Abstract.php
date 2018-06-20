@@ -6,10 +6,10 @@
  * LICENSE
  *
  * @category   PageCarton CMS
- * @package    PCMailer_Contacts_Abstract
+ * @package    PCMailer_List_Abstract
  * @copyright  Copyright (c) 2018 PageCarton (http://www.pagecarton.org)
  * @license    GNU General Public License version 2 or later; see LICENSE.txt
- * @version    $Id: Abstract.php Sunday 17th of June 2018 12:44PM ayoola@ayoo.la $
+ * @version    $Id: Abstract.php Sunday 17th of June 2018 12:39PM ayoola@ayoo.la $
  */
 
 /**
@@ -17,7 +17,7 @@
  */
 
 
-class PCMailer_Contacts_Abstract extends PageCarton_Widget
+class PCMailer_List_Abstract extends PageCarton_Widget
 {
 	
     /**
@@ -25,21 +25,21 @@ class PCMailer_Contacts_Abstract extends PageCarton_Widget
      * 
      * @var array
      */
-	protected $_identifierKeys = array( 'contacts_id' );
+	protected $_identifierKeys = array( 'list_id' );
  	
     /**
      * The column name of the primary key
      *
      * @var string
      */
-	protected $_idColumn = 'contacts_id';
+	protected $_idColumn = 'list_id';
 	
     /**
      * Identifier for the column to edit
      * 
      * @var string
      */
-	protected $_tableClass = 'Contacts';
+	protected $_tableClass = 'PCMailer_List';
 	
     /**
      * Access level for player. Defaults to everyone
@@ -65,15 +65,7 @@ class PCMailer_Contacts_Abstract extends PageCarton_Widget
 
 		$fieldset = new Ayoola_Form_Element;
 	//	$fieldset->placeholderInPlaceOfLabel = false;       
-        $fieldset->addElement( array( 'name' => 'firstname', 'type' => 'InputText', 'value' => @$values['firstname'] ) ); 
-        $fieldset->addElement( array( 'name' => 'lastname', 'type' => 'InputText', 'value' => @$values['lastname'] ) ); 
-        $fieldset->addElement( array( 'name' => 'email', 'type' => 'InputText', 'value' => @$values['email'] ) ); 
-        $fieldset->addElement( array( 'name' => 'enabled', 'type' => 'InputText', 'value' => @$values['enabled'] ) ); 
-        $fieldset->addElement( array( 'name' => 'verified', 'type' => 'InputText', 'value' => @$values['verified'] ) ); 
-        $fieldset->addElement( array( 'name' => 'confirmed', 'type' => 'InputText', 'value' => @$values['confirmed'] ) ); 
-        $fieldset->addElement( array( 'name' => 'lists_id', 'type' => 'InputText', 'value' => @$values['lists_id'] ) ); 
-        $fieldset->addElement( array( 'name' => 'unsubscribed', 'type' => 'InputText', 'value' => @$values['unsubscribed'] ) ); 
-        $fieldset->addElement( array( 'name' => 'bounced', 'type' => 'InputText', 'value' => @$values['bounced'] ) ); 
+        $fieldset->addElement( array( 'name' => 'list_title', 'type' => 'InputText', 'value' => @$values['list_title'] ) ); 
 
 		$fieldset->addLegend( $legend );
 		$form->addFieldset( $fieldset );   
