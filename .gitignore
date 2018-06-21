@@ -38,6 +38,8 @@ application/documents/layout/*/theme/data-backup/*
 
 #  dont add this example
 application/databases/Application/Log/*
+application/databases/Application/settings.xml
+application/databases/PageCarton/Cron/Run/*
 application/pages/data-backup/*
 application/sub_domain/* 
 application/databases/Ayoola/Access/localuser.xml
