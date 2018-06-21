@@ -5,7 +5,6 @@ CONTENTS OF THIS FILE
  * Requirements and notes
  * Optional server requirements
  * Installation
- * Features
 
 REQUIREMENTS AND NOTES
 ----------------------
@@ -66,18 +65,3 @@ INSTALLATION
 4. Activate the plugin and look for PCMail Options in the Admin Options under Admin Panel
    
    http://example.com/pc-admin
-
-FEATURES
-------------
-
-1. Email Campaign Manager.
-
-2. List manager and list categories.
-
-3. Sending Delay
-
-4. Autorun through PageCarton Cron
-
-5. WYSIWYG Email Editor
-
-6. Text Mode and HTML Email Mod

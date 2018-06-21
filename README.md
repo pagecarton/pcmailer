@@ -4,6 +4,7 @@ CONTENTS OF THIS FILE
  * About
  * Configuration and features
  * More information
+ * Features
 
 ABOUT PCMailer
 ------------
@@ -34,3 +35,21 @@ MORE INFORMATION
 
  * See the PageCarton plugins page site:
    https://plugins.pagecarton.org/2018/06/20/pcmailer.html
+
+
+FEATURES
+------------
+
+1. Email Campaign Manager.
+
+2. List manager and list categories.
+
+3. Sending Delay
+
+4. Autorun through PageCarton Cron
+
+5. WYSIWYG Email Editor
+
+6. Text Mode and HTML Email Mod
+
+7. CSV Contact Importer and Column Match
