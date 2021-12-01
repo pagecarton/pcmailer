@@ -26,8 +26,8 @@ class PCMailer_Campaign_List extends PCMailer_Campaign_Abstract
      */	
     public function init()
     {
-      $this->setViewContent( $this->getList() );		
-    } 
+      $this->setViewContent( $this->getList() );  		
+    }
 	
     /**
      * Paginate the list with Ayoola_Paginator

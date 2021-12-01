@@ -1,0 +1,57 @@
+<?php return array (
+  0 => 
+  array (
+    'extension_title' => 'PCMailer',
+    'modules' => 
+    array (
+      0 => '/PCMailer/Campaign.php',
+      1 => '/PCMailer/Campaign/Abstract.php',
+      2 => '/PCMailer/Campaign/Creator.php',
+      3 => '/PCMailer/Campaign/Delete.php',
+      4 => '/PCMailer/Campaign/Editor.php',
+      5 => '/PCMailer/Campaign/List.php',
+      6 => '/PCMailer/Contact.php',
+      7 => '/PCMailer/Contact/Abstract.php',
+      8 => '/PCMailer/Contact/Creator.php',
+      9 => '/PCMailer/Contact/Delete.php',
+      10 => '/PCMailer/Contact/Editor.php',
+      11 => '/PCMailer/Contact/Importer.php',
+      12 => '/PCMailer/Contact/List.php',
+      13 => '/PCMailer/List.php',
+      14 => '/PCMailer/List/Abstract.php',
+      15 => '/PCMailer/List/Creator.php',
+      16 => '/PCMailer/List/Delete.php',
+      17 => '/PCMailer/List/Editor.php',
+      18 => '/PCMailer/List/List.php',
+      19 => '/PCMailer/Send.php',
+      20 => '/PCMailer/Settings.php',
+    ),
+    'settings_class' => 'PCMailer_Settings',
+    'databases' => 
+    array (
+      0 => '/Ayoola/Page/Menu/option.xml',
+      1 => '/PageCarton/Cron/table.xml',
+    ),
+    'documents' => NULL,
+    'pages' => NULL,
+    'extension_name' => 'pcmailer',
+    'status' => '',
+    'settings' => NULL,
+    'components' => NULL,
+    'plugins' => NULL,
+    'templates' => NULL,
+    'article_url' => '',
+    'extension_id' => '1578097432-0-1',
+    'creation_time' => '1578097432',
+    'modified_time' => '',
+    '__user_id' => '1554892638.1731',
+    '__update_user_id' => NULL,
+    '__user_agent_id' => '',
+    '__ip' => 
+    array (
+      'REMOTE_ADDR' => '::1',
+      'HTTP_CLIENT_IP' => '',
+      'HTTP_X_FORWARDED_FOR' => '',
+    ),
+  ),
+);
