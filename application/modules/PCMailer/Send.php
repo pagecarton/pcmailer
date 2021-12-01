@@ -129,7 +129,7 @@ class PCMailer_Send extends PageCarton_Widget
             {
                 $timeToGo = ( $delayBeforeNextRun - ( $currentTime - $runTimeSettings['last_runtime'] ) );
                 $this->setViewContent( '<div class="badnews">' . ( $timeFilter->filter( $timeToGo + $currentTime ) ) . ' until the next sending...</div>' );
-                //return false;
+                return false;
             }
             $runCount = 0;
             $runTimeSettings['last_runtime'] = $currentTime;
