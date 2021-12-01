@@ -39,53 +39,56 @@ class PCMailer_Send extends PageCarton_Widget
      */
 	public static function getContacts( $listId )
     {
-
-        $listInfo = PCMailer_List::getInstance()->selectOne( null, array( 'list_id' => $listId ) );
-
         $contacts = PCMailer_Contact::getInstance()->select( null, array( 'list_id' => $listId ) );
 
         $emails = array();
-        if( ! empty( $listInfo['products'] ) )
+
+        $lists = PCMailer_List::getInstance()->select( null, array( 'list_id' => $listId ) );
+        foreach( $lists as $listInfo )
         {
-            $emailX = Application_Subscription_Checkout_Order::getInstance()->select( 'email', array( 'article_url' => $listInfo['products'] ) );
-            $emails = array_merge( $emails, $emailX );
-
-        }
-        if( ! empty( $listInfo['include_options'] ) )
-        {
-            if( in_array( 'purchaser', $listInfo['include_options'] ) )
+            if( ! empty( $listInfo['products'] ) )
             {
-                $emailX = Application_Subscription_Checkout_Order::getInstance()->select( 'email' );
+                $emailX = Application_Subscription_Checkout_Order::getInstance()->select( 'email', array( 'article_url' => $listInfo['products'] ) );
                 $emails = array_merge( $emails, $emailX );
-
+    
             }
-            if( in_array( 'mailing-list', $listInfo['include_options'] ) )
+            if( ! empty( $listInfo['include_options'] ) )
             {
-                $emailX = Application_User_UserEmail_MailingList::getInstance()->select( 'email' );
-                $emails = array_merge( $emails, $emailX );
-
-            }
-            if( in_array( 'user-accounts', $listInfo['include_options'] ) )
-            {
-                $emailX = Ayoola_Access_LocalUser::getInstance()->select( 'email' );
-                $emails = array_merge( $emails, $emailX );
-
-            }
-        }
-        if( ! empty( $listInfo['forms'] ) )
-        {
-            if( $data = Ayoola_Form_Table_Data::getInstance()->select( null, array( 'form_name' => $listInfo['forms'] ) ) )
-            {
-                foreach( $data as $each )
+                if( in_array( 'purchaser', $listInfo['include_options'] ) )
                 {
-                    $email = $each['email'] ? : $each['email_address'];
-                    if( ! empty( $email ) )
+                    $emailX = Application_Subscription_Checkout_Order::getInstance()->select( 'email' );
+                    $emails = array_merge( $emails, $emailX );
+    
+                }
+                if( in_array( 'mailing-list', $listInfo['include_options'] ) )
+                {
+                    $emailX = Application_User_UserEmail_MailingList::getInstance()->select( 'email' );
+                    $emails = array_merge( $emails, $emailX );
+    
+                }
+                if( in_array( 'user-accounts', $listInfo['include_options'] ) )
+                {
+                    $emailX = Ayoola_Access_LocalUser::getInstance()->select( 'email' );
+                    $emails = array_merge( $emails, $emailX );
+    
+                }
+            }
+            if( ! empty( $listInfo['forms'] ) )
+            {
+                if( $data = Ayoola_Form_Table_Data::getInstance()->select( null, array( 'form_name' => $listInfo['forms'] ) ) )
+                {
+                    foreach( $data as $each )
                     {
-                        $emails[] = $email; 
+                        $email = $each['email'] ? : $each['email_address'];
+                        if( ! empty( $email ) )
+                        {
+                            $emails[] = $email; 
+                        }
                     }
                 }
             }
         }
+
         $emails = array_unique( array_map( 'strtolower', $emails ) );
         $contacts = array_merge( $emails, $contacts );
 
@@ -126,7 +129,7 @@ class PCMailer_Send extends PageCarton_Widget
             {
                 $timeToGo = ( $delayBeforeNextRun - ( $currentTime - $runTimeSettings['last_runtime'] ) );
                 $this->setViewContent( '<div class="badnews">' . ( $timeFilter->filter( $timeToGo + $currentTime ) ) . ' until the next sending...</div>' );
-                return false;
+                //return false;
             }
             $runCount = 0;
             $runTimeSettings['last_runtime'] = $currentTime;
@@ -134,6 +137,8 @@ class PCMailer_Send extends PageCarton_Widget
             foreach( $campaigns as $campaign )
             {
                 $contacts = $campaign['contacts'] = $campaign['contacts'] ? : self::getContacts( $campaign['list_id'] );
+
+
                 $campaign['sent'] = is_array( $campaign['sent'] ) ? $campaign['sent'] : array();
                 $campaign['body'] = Ayoola_Page_Editor_Text::addDomainToAbsoluteLinks( $campaign['body'] );
                 $count = 0;
@@ -143,20 +148,22 @@ class PCMailer_Send extends PageCarton_Widget
                 {
                     if( $runCount >= $sendingLimitPerRun )
                     {
-                        break 2;
+                        break;
                     }
 
-                    $runCount++;
                     if( is_string( $contact ) )
                     {
                         $contact = array( 'email' => $contact, 'contact_id' => $contact );
                     }
 
-                    $campaign['body'] = self::replacePlaceholders( $campaign['body'], $contact );
-                    $campaign['subject'] = self::replacePlaceholders( $campaign['subject'], $contact );
+                    if( is_array( $contact ) )
+                    {
+                        $campaign['body'] = self::replacePlaceholders( $campaign['body'], $contact );
+                        $campaign['subject'] = self::replacePlaceholders( $campaign['subject'], $contact );
+                    }
                     $contact['to'] = $contact['email'];
 
-                    if( ! empty( $campaign['sent'] ) && is_array( $campaign['sent'] ) && in_array( $contact['contact_id'], $campaign['sent'] ) )
+                    if( ! empty( $campaign['sent'] ) && is_array( $campaign['sent'] ) && in_array( $contact['email'], $campaign['sent'] ) )
                     {
                         continue;
                     }
@@ -169,6 +176,8 @@ class PCMailer_Send extends PageCarton_Widget
                     //sleep( rand( 1, 5 ) );
                     if( ! in_array( $contact['email'], $campaign['sent'] ) )
                     {
+                        $runCount++;
+                        $count++;
                         self::sendMail( $campaign );
                     }
                     $campaign['sent'][] = $contact['email'];
@@ -178,7 +187,6 @@ class PCMailer_Send extends PageCarton_Widget
                         $campaign['status'] = '2';
                     }
                     PCMailer_Campaign::getInstance()->update( $campaign, array( 'campaign_id' => $campaign['campaign_id'] ) );
-                    $count++;
                 }
 
                 $this->setViewContent( '<div class="goodnews">"' . $campaign['subject'] . '" sent to ' . $count . ' recipent(s).</div>' );

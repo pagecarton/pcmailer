@@ -25,7 +25,7 @@ class PCMailer_Campaign extends PageCarton_Table
      *
      * @param string
      */
-    protected $_tableVersion = '0.5';  
+    protected $_tableVersion = '0.7';  
 
     /**
      * Table data types and declaration
@@ -44,7 +44,7 @@ class PCMailer_Campaign extends PageCarton_Table
   'last_runtime' => 'INT',
   'unsubscribes' => 'JSON',
   'body' => 'TEXTAREA',
-  'list_id' => 'INPUTTEXT',
+  'list_id' => 'JSON',
 );
 
 

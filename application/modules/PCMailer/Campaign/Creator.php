@@ -38,7 +38,6 @@ class PCMailer_Campaign_Creator extends PCMailer_Campaign_Abstract
 			$this->createForm( 'Submit...', 'Add new' );
 			$this->setViewContent( $this->getForm()->view() );
 
-		//	self::v( $_POST );
 			if( ! $values = $this->getForm()->getValues() ){ return false; }
 			
 			//	Notify Admin
@@ -49,25 +48,17 @@ class PCMailer_Campaign_Creator extends PCMailer_Campaign_Abstract
 			';
 			try
 			{
-		//		var_export( $mailInfo );
 				@Ayoola_Application_Notification::mail( $mailInfo );
 			}
 			catch( Ayoola_Exception $e ){ null; }
-		//	if( ! $this->insertDb() ){ return false; }
 			if( $this->insertDb( $values ) )
 			{ 
 				$this->setViewContent( '<div class="goodnews">Added successfully. </div>', true ); 
 			}
-		//	$this->setViewContent( $this->getForm()->view() );
-            
-
-
-            // end of widget process
           
 		}  
 		catch( Exception $e )
         { 
-            //  Alert! Clear the all other content and display whats below.
             $this->setViewContent( '<p class="badnews">Theres an error in the code</p>', true ); 
             return false; 
         }

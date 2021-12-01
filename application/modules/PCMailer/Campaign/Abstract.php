@@ -80,7 +80,7 @@ class PCMailer_Campaign_Abstract extends PageCarton_Widget
         //var_export( $filter->filter( $options ) );
         $options = array( '' => 'All Contacts' ) + $filter->filter( $options );
 
-        $fieldset->addElement( array( 'name' => 'list_id', 'name' => 'To', 'type' => 'SelectMultiple', 'value' => @$values['list_id'] ), $options ); 
+        $fieldset->addElement( array( 'name' => 'list_id', 'label' => 'To', 'multiple' => true, 'type' => 'SelectMultiple', 'value' => @$values['list_id'] ), $options ); 
 
         $fieldset->addElement( array( 'name' => 'subject', 'placeholder' => 'Email Subject', 'type' => 'InputText', 'value' => @$values['subject'] ) );
 
