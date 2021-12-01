@@ -105,7 +105,6 @@ class PCMailer_Send extends PageCarton_Widget
 
             //  Output demo content to screen
             $campaigns = PCMailer_Campaign::getInstance()->select( null, array( 'status' => 1 ) );
-
             if( empty( $campaigns ) )
             {
                 $this->setViewContent( '<div class="badnews">No campaign is on queue for sending...</div>' ); 
