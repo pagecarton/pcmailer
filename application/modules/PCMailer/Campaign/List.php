@@ -43,6 +43,8 @@ class PCMailer_Campaign_List extends PCMailer_Campaign_Abstract
 		$list->setListOptions( 
 								array( 
 										'Creator' => '<a rel="spotlight;" onClick="ayoola.spotLight.showLinkInIFrame( \'' . Ayoola_Application::getUrlPrefix() . '/tools/classplayer/get/object_name/PCMailer_Campaign_Creator/\', \'page_refresh\' );" title="">Create a new Campaign</a>',    
+										'List' => '<a rel="spotlight;" onClick="ayoola.spotLight.showLinkInIFrame( \'' . Ayoola_Application::getUrlPrefix() . '/tools/classplayer/get/object_name/PCMailer_List_List/\', \'\' );" title="">Contact Category List</a>',    
+										'Contact' => '<a rel="spotlight;" onClick="ayoola.spotLight.showLinkInIFrame( \'' . Ayoola_Application::getUrlPrefix() . '/tools/classplayer/get/object_name/PCMailer_Contact_List/\', \'\' );" title="">Contacts</a>',    
 									) 
 							);
 		$list->setKey( $this->getIdColumn() );
