@@ -31,7 +31,22 @@ class PCMailer_Settings extends PageCarton_Settings
      */
 	public function createForm( $submitValue = null, $legend = null, Array $values = null )
     {
-		$settings = unserialize( @$values['settings'] ) ? : $values['settings'];
+		if( ! $settings = unserialize( @$values['settings'] ) )
+		{
+			if( is_array( $values['data'] ) )
+			{
+				$settings = $values['data'];
+			}
+			elseif( is_array( $values['settings'] ) )
+			{
+				$settings = $values['settings'];
+			}
+			else
+			{
+				$settings = $values;
+			}
+		}        
+        
         $form = new Ayoola_Form( array( 'name' => $this->getObjectName() ) );
 		$form->submitValue = $submitValue ;
 		$form->oneFieldSetAtATime = true;
