@@ -71,6 +71,15 @@ class PCMailer_Campaign_Abstract extends PageCarton_Widget
 
 		$fieldset = new Ayoola_Form_Element;
 
+        $options = array( 'Plain Text', 'HTML Editor' );
+        //$options = array_combine( array_values( $options ), array_values( $options ) );
+        $fieldset->addElement( array( 'name' => 'type', 'type' => 'Select', 'value' => @$values['type'] ), $options ); 
+
+        if( ! empty( $values['type'] ) )
+        {
+            Application_Article_Abstract::initHTMLEditor();
+        }
+
         $fieldset->addElement( array( 'name' => 'from', 'placeholder' => 'e.g. email@example.com', 'type' => 'InputText', 'value' => @$values['from'] ) ); 
 
         $filter = new Ayoola_Filter_SelectListArray( 'list_id', 'list_title');
@@ -84,7 +93,6 @@ class PCMailer_Campaign_Abstract extends PageCarton_Widget
 
         $fieldset->addElement( array( 'name' => 'subject', 'placeholder' => 'Email Subject', 'type' => 'InputText', 'value' => @$values['subject'] ) );
 
-		Application_Article_Abstract::initHTMLEditor();
         $fieldset->addElement( array( 'name' => 'body', 'placeholder' => 'Enter the body content of your email campaign here...', 'type' => 'TextArea', 'data-document_type' => 'html', 'value' => @$values['body'] ) ); 
         $options = static::$_availableStatuses;
         if( empty( $values['sent'] ) )

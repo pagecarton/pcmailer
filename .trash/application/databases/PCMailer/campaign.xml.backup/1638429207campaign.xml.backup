@@ -1,0 +1,117 @@
+<?php return array (
+  0 => 
+  array (
+    'opened' => NULL,
+    'clicked' => NULL,
+    'last_runtime' => 0,
+    'unsubscribes' => NULL,
+    'campaign_id' => '0-1638193425-1',
+    'creation_time' => '1638193425',
+    '__user_id' => '1636631244.9718',
+    '__user_agent_id' => '',
+    '__ip' => 
+    array (
+      'REMOTE_ADDR' => '::1',
+      'HTTP_CLIENT_IP' => '',
+      'HTTP_X_FORWARDED_FOR' => '',
+    ),
+    '__duuid' => '84e6be38-4d7f-4a95-94bf-3804044cc885',
+    'sent' => 
+    array (
+      0 => 'ayoola@ayoo.la',
+      1 => 'ayoola.falola@gmail.com',
+    ),
+    'contacts' => 
+    array (
+      0 => 
+      array (
+        'contact_id' => '0-1638427189-2',
+        'creation_time' => '1638427189',
+        '__user_id' => '1636631244.9718',
+        '__user_agent_id' => '',
+        '__ip' => 
+        array (
+          'REMOTE_ADDR' => '::1',
+          'HTTP_CLIENT_IP' => '',
+          'HTTP_X_FORWARDED_FOR' => '',
+        ),
+        '__duuid' => '84e6be38-4d7f-4a95-94bf-3804044cc885',
+        'title' => '',
+        'firstname' => '',
+        'lastname' => '',
+        'email' => 'ayoola@ayoo.la',
+        'website' => '',
+        'company_name' => 'Comeriver Limited',
+        'industry' => '',
+        'list_id' => 
+        array (
+          0 => '0-1638193206-1',
+        ),
+        'enabled' => 0,
+        'verified' => 0,
+        'confirmed' => '',
+        'unsubscribed' => 0,
+        'bounced' => 0,
+        'modified_time' => '1638427201',
+        '__update_user_id' => 
+        array (
+          0 => '1636631244.9718',
+        ),
+      ),
+      1 => 
+      array (
+        'contact_id' => '0-1638193084-1',
+        'creation_time' => '1638193084',
+        '__user_id' => '1636631244.9718',
+        '__user_agent_id' => '',
+        '__ip' => 
+        array (
+          'REMOTE_ADDR' => '::1',
+          'HTTP_CLIENT_IP' => '',
+          'HTTP_X_FORWARDED_FOR' => '',
+        ),
+        '__duuid' => '84e6be38-4d7f-4a95-94bf-3804044cc885',
+        'title' => 'Mr.',
+        'firstname' => 'Ayoola',
+        'lastname' => 'Falola',
+        'email' => 'ayoola.falola@gmail.com',
+        'website' => 'www.ayoo.la',
+        'company_name' => 'Comeriver Limited',
+        'industry' => '',
+        'list_id' => 
+        array (
+          0 => '0-1638193206-1',
+        ),
+        'enabled' => 0,
+        'verified' => 0,
+        'confirmed' => '',
+        'unsubscribed' => 0,
+        'bounced' => 0,
+        'modified_time' => '1638193394',
+        '__update_user_id' => 
+        array (
+          0 => '1636631244.9718',
+        ),
+      ),
+    ),
+    'from' => '',
+    'list_id' => 
+    array (
+      0 => '0-1638193206-1',
+    ),
+    'subject' => 'sample Email',
+    'body' => '<p>CHECK OUT OUR RECENT POSTS BELOW </p>
+<div>
+                                                <div data-object-name="Application_Article_ShowAll" name="Application_Article_ShowAll_container"><div name="Application_Article_ShowAll"></div><div><p style="clear: both;" class="pc-notify-normal pc_no_post_to_show pc_give_space_top_bottom"> </p><div class="pc_posts_distinguish_sets" id="post-id-5c79a1e0e5ff1ed9897898e1734cfb52_pagination"></div></div>	</div>
+                                            </div>
+',
+    'status' => 2,
+    'send_time' => '1638434460',
+    'modified_time' => '1638427742',
+    '__update_user_id' => 
+    array (
+      0 => '1636631244.9718',
+      1 => '1636631244.9718',
+    ),
+  ),
+);
