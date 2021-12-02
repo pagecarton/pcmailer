@@ -136,6 +136,7 @@ class PCMailer_Send extends PageCarton_Widget
             $storage->store( $runTimeSettings );
             foreach( $campaigns as $campaign )
             {
+                $toSend = $campaign;
                 if( $campaign['send_time'] > time() )
                 {
                     continue;
@@ -143,7 +144,11 @@ class PCMailer_Send extends PageCarton_Widget
                 $contacts = $campaign['contacts'] = $campaign['contacts'] ? : self::getContacts( $campaign['list_id'] );
 
                 $campaign['sent'] = is_array( $campaign['sent'] ) ? $campaign['sent'] : array();
-                $campaign['body'] = Ayoola_Page_Editor_Text::addDomainToAbsoluteLinks( $campaign['body'] );
+                $toSend['body'] = Ayoola_Page_Editor_Text::addDomainToAbsoluteLinks( $toSend['body'] );
+
+                $toSend['body'] = Ayoola_Page_Editor_Text::embedWidget( $toSend['body'], array() );
+
+
                 $count = 0;
 
                 //  no of emails per run 
@@ -161,8 +166,8 @@ class PCMailer_Send extends PageCarton_Widget
 
                     if( is_array( $contact ) )
                     {
-                        $campaign['body'] = self::replacePlaceholders( $campaign['body'], $contact );
-                        $campaign['subject'] = self::replacePlaceholders( $campaign['subject'], $contact );
+                        $toSend['body'] = self::replacePlaceholders( $toSend['body'], $contact );
+                        $toSend['subject'] = self::replacePlaceholders( $toSend['subject'], $contact );
                     }
                     $contact['to'] = $contact['email'];
                     if( ! empty( $campaign['sent'] ) && is_array( $campaign['sent'] ) && in_array( $contact['email'], $campaign['sent'] ) )
@@ -174,13 +179,13 @@ class PCMailer_Send extends PageCarton_Widget
                     {
                         $contact['to'] = '"' . $name . '" <' . $contact['email'] . '>';
                     }
-                    $campaign['to'] = $contact['to'];
+                    $toSend['to'] = $contact['to'];
                     //sleep( rand( 1, 5 ) );
                     if( ! in_array( $contact['email'], $campaign['sent'] ) )
                     {
                         $runCount++;
                         $count++;
-                        self::sendMail( $campaign );    
+                        self::sendMail( $toSend );    
                     }
                     if( empty( $campaign['sent'] ) )
                     {
