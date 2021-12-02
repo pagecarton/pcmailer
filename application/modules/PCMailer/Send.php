@@ -136,8 +136,11 @@ class PCMailer_Send extends PageCarton_Widget
             $storage->store( $runTimeSettings );
             foreach( $campaigns as $campaign )
             {
+                if( $campaign['send_time'] > time() )
+                {
+                    continue;
+                }
                 $contacts = $campaign['contacts'] = $campaign['contacts'] ? : self::getContacts( $campaign['list_id'] );
-
 
                 $campaign['sent'] = is_array( $campaign['sent'] ) ? $campaign['sent'] : array();
                 $campaign['body'] = Ayoola_Page_Editor_Text::addDomainToAbsoluteLinks( $campaign['body'] );
@@ -162,7 +165,6 @@ class PCMailer_Send extends PageCarton_Widget
                         $campaign['subject'] = self::replacePlaceholders( $campaign['subject'], $contact );
                     }
                     $contact['to'] = $contact['email'];
-
                     if( ! empty( $campaign['sent'] ) && is_array( $campaign['sent'] ) && in_array( $contact['email'], $campaign['sent'] ) )
                     {
                         continue;
@@ -178,13 +180,38 @@ class PCMailer_Send extends PageCarton_Widget
                     {
                         $runCount++;
                         $count++;
-                        self::sendMail( $campaign );
+                        self::sendMail( $campaign );    
                     }
+                    if( empty( $campaign['sent'] ) )
+                    {
+                        //	Notify Admin
+                        $mailInfo = array();
+                        $mailInfo['subject'] = 'Campaign Started';
+                        $mailInfo['body'] = 'An email campaign "' . $campaign['subject'] . '" has started and would be sent to ' . count( $contacts ) . ' contacts';
+                        try
+                        {
+                            @Ayoola_Application_Notification::mail( $mailInfo );
+                        }
+                        catch( Ayoola_Exception $e ){ null; }                
+
+                    }
+
                     $campaign['sent'][] = $contact['email'];
 
                     if( count( $campaign['sent'] ) === count( $contacts ) )
                     {
                         $campaign['status'] = '2';
+                        
+                        //	Notify Admin
+                        $mailInfo = array();
+                        $mailInfo['subject'] = 'Campaign Completed';
+                        $mailInfo['body'] = 'An email Campaign "' . $campaign['subject'] . '" has been sent successfully to ' . count( $campaign['sent'] ) . ' contacts';
+                        try
+                        {
+                            @Ayoola_Application_Notification::mail( $mailInfo );
+                        }
+                        catch( Ayoola_Exception $e ){ null; }                
+
                     }
                     PCMailer_Campaign::getInstance()->update( $campaign, array( 'campaign_id' => $campaign['campaign_id'] ) );
                 }

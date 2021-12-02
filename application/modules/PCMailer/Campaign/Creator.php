@@ -42,8 +42,8 @@ class PCMailer_Campaign_Creator extends PCMailer_Campaign_Abstract
 			
 			//	Notify Admin
 			$mailInfo = array();
-			$mailInfo['subject'] = __CLASS__;
-			$mailInfo['body'] = 'Form submitted on your PageCarton Installation with the following information: "' . htmlspecialchars_decode( var_export( $values, true ) ) . '". 
+			$mailInfo['subject'] = 'Campaign Created';
+			$mailInfo['body'] = 'An email Campaign "' . $values['subject'] . '" has been created with the following information : "' . htmlspecialchars_decode( var_export( $values, true ) ) . '". 
 			
 			';
 			try
@@ -53,7 +53,7 @@ class PCMailer_Campaign_Creator extends PCMailer_Campaign_Abstract
 			catch( Ayoola_Exception $e ){ null; }
 			if( $this->insertDb( $values ) )
 			{ 
-				$this->setViewContent( '<div class="goodnews">Added successfully. </div>', true ); 
+				$this->setViewContent( '<div class="goodnews">Campaign created successfully. </div>', true ); 
 			}
           
 		}  

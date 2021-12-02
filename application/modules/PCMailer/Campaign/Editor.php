@@ -35,9 +35,20 @@ class PCMailer_Campaign_Editor extends PCMailer_Campaign_Abstract
 
             if( $data['status'] != $values['status'] )
             {
-                //  status changed, reset the sent list
                 $values['sent'] = array();
+                $values['contacts'] = array();
             }
+            //	Notify Admin
+            $mailInfo = array();
+            $mailInfo['subject'] = 'Campaign Updated';
+            $mailInfo['body'] = 'An email Campaign "' . $values['subject'] . '" has been updated with the following information : "' . htmlspecialchars_decode( var_export( $values, true ) ) . '". 
+            
+            ';
+            try
+            {
+                @Ayoola_Application_Notification::mail( $mailInfo );
+            }
+            catch( Ayoola_Exception $e ){ null; }                //  status changed, reset the sent list
 
 			if( $this->updateDb( $values ) ){ $this->setViewContent( '<div class="goodnews">Data updated successfully</div>', true ); } 
 

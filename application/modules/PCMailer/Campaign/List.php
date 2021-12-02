@@ -42,9 +42,9 @@ class PCMailer_Campaign_List extends PCMailer_Campaign_Abstract
 		$list->setData( $this->getDbData() );
 		$list->setListOptions( 
 								array( 
-										'Creator' => '<a rel="spotlight;" onClick="ayoola.spotLight.showLinkInIFrame( \'' . Ayoola_Application::getUrlPrefix() . '/tools/classplayer/get/object_name/PCMailer_Campaign_Creator/\', \'page_refresh\' );" title="">Create a new Campaign</a>',    
-										'List' => '<a rel="spotlight;" onClick="ayoola.spotLight.showLinkInIFrame( \'' . Ayoola_Application::getUrlPrefix() . '/tools/classplayer/get/object_name/PCMailer_List_List/\', \'\' );" title="">Contact Category List</a>',    
-										'Contact' => '<a rel="spotlight;" onClick="ayoola.spotLight.showLinkInIFrame( \'' . Ayoola_Application::getUrlPrefix() . '/tools/classplayer/get/object_name/PCMailer_Contact_List/\', \'\' );" title="">Contacts</a>',    
+										'Creator' => '<a rel="spotlight;" onClick="ayoola.spotLight.showLinkInIFrame( \'' . Ayoola_Application::getUrlPrefix() . '/tools/classplayer/get/object_name/PCMailer_Campaign_Creator/\', \'page_refresh\' );"  href="javascript:">Create a new Campaign</a>',    
+										'List' => '<a rel="spotlight;" onClick="ayoola.spotLight.showLinkInIFrame( \'' . Ayoola_Application::getUrlPrefix() . '/tools/classplayer/get/object_name/PCMailer_List_List/\', \'\' );"  href="javascript:">Contact Category List</a>',    
+										'Contact' => '<a rel="spotlight;" onClick="ayoola.spotLight.showLinkInIFrame( \'' . Ayoola_Application::getUrlPrefix() . '/tools/classplayer/get/object_name/PCMailer_Contact_List/\', \'\' );"  href="javascript:">Contacts</a>',    
 									) 
 							);
 		$list->setKey( $this->getIdColumn() );
@@ -57,10 +57,10 @@ class PCMailer_Campaign_List extends PCMailer_Campaign_Abstract
                     'subject' => array( 'field' => 'subject', 'value' =>  '%FIELD%', 'filter' =>  '' ), 
                     'Status' => array( 'field' => 'status', 'value' =>  '%FIELD%', 'filter' =>  '', 'value_representation' =>  static::$_availableStatuses ), 
                     array( 'field' => 'creation_time', 'value' =>  '%FIELD%', 'filter' =>  'Ayoola_Filter_Time' ), 
-                    '<a rel="spotlight;" onClick="ayoola.spotLight.showLinkInIFrame( \'' . Ayoola_Application::getUrlPrefix() . '/tools/classplayer/get/object_name/PCMailer_Campaign_Editor/?' . $this->getIdColumn() . '=%KEY%\', \'page_refresh\' );" title="">
+                    '<a rel="spotlight;" onClick="ayoola.spotLight.showLinkInIFrame( \'' . Ayoola_Application::getUrlPrefix() . '/tools/classplayer/get/object_name/PCMailer_Campaign_Editor/?' . $this->getIdColumn() . '=%KEY%\', \'page_refresh\' );" href="javascript:">
                     <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                     </a>',
-                    '<a rel="spotlight;" onClick="ayoola.spotLight.showLinkInIFrame( \'' . Ayoola_Application::getUrlPrefix() . '/tools/classplayer/get/object_name/PCMailer_Campaign_Delete/?' . $this->getIdColumn() . '=%KEY%\', \'page_refresh\' );" title=""><i class="fa fa-trash" aria-hidden="true"></i></a>',
+                    '<a rel="spotlight;" onClick="ayoola.spotLight.showLinkInIFrame( \'' . Ayoola_Application::getUrlPrefix() . '/tools/classplayer/get/object_name/PCMailer_Campaign_Delete/?' . $this->getIdColumn() . '=%KEY%\', \'page_refresh\' );"  href="javascript:"><i class="fa fa-trash" aria-hidden="true"></i></a>',
 				)
 		);
 		return $list;

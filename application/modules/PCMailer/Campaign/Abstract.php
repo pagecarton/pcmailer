@@ -97,6 +97,8 @@ class PCMailer_Campaign_Abstract extends PageCarton_Widget
         }
         $fieldset->addElement( array( 'name' => 'status', 'type' => 'Select', 'value' => @$values['status'] ), $options ); 
 
+        $fieldset->addElement( array( 'name' => 'send_time', 'label' => 'Schedule Send Time', 'type' => 'DateTime', 'value' => @$values['send_time'] ) ); 
+
 		$fieldset->addLegend( $legend );
 		$form->addFieldset( $fieldset );   
 		$this->setForm( $form );

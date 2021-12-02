@@ -35,6 +35,16 @@ class PCMailer_Campaign_Delete extends PCMailer_Campaign_Abstract
             
 			if( $this->deleteDb() ){ $this->setViewContent( '<div class="goodnews">Data deleted successfully</div>', true ); } 
 
+            //	Notify Admin
+            $mailInfo = array();
+            $mailInfo['subject'] = 'Campaign Deleted';
+            $mailInfo['body'] = 'An email Campaign "' . $data['subject'] . '" has been deleted';
+            try
+            {
+                @Ayoola_Application_Notification::mail( $mailInfo );
+            }
+            catch( Ayoola_Exception $e ){ null; }                
+
              // end of widget process
           
 		}  
