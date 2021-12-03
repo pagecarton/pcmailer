@@ -131,6 +131,8 @@ class PCMailer_Send extends PageCarton_Widget
             
             $delayBeforeNextRun = Application_Settings_Abstract::getSettings( 'pcmailer', 'send_queue_delay' ) ? : 3600;
             $currentTime = time();
+            
+
             $timeFilter = new Ayoola_Filter_Time();
             if( ! empty( $runTimeSettings['last_runtime'] ) && ( $currentTime - $runTimeSettings['last_runtime'] < $delayBeforeNextRun ) )
             {
@@ -138,6 +140,7 @@ class PCMailer_Send extends PageCarton_Widget
                 $this->setViewContent( '<div class="badnews">' . ( $timeFilter->filter( $timeToGo + $currentTime ) ) . ' until the next sending...</div>' );
                 return false;
             }
+
             $runCount = 0;
             $runTimeSettings['last_runtime'] = $currentTime;
             $storage->store( $runTimeSettings );
@@ -146,6 +149,7 @@ class PCMailer_Send extends PageCarton_Widget
                 $toSend = $campaign;
                 if( $campaign['send_time'] > time() )
                 {
+                    $this->setViewContent( '<p class="badnews"> It is not yet time to send "' . $campaign['subject'] . '" campaign</p>' ); 
                     continue;
                 }
                 $contacts = $campaign['contacts'] = $campaign['contacts'] ? : self::getContacts( $campaign['list_id'] );
@@ -156,6 +160,7 @@ class PCMailer_Send extends PageCarton_Widget
 
 
                 $count = 0;
+                $contactCount = 0;
 
                 //  no of emails per run 
                 foreach( $contacts as $contact )
@@ -176,6 +181,9 @@ class PCMailer_Send extends PageCarton_Widget
                         $toSend['subject'] = self::replacePlaceholders( $toSend['subject'], $contact );
                     }
                     $contact['to'] = $contact['email'];
+
+
+                    $contactCount++;
                     if( ! empty( $campaign['sent'] ) && is_array( $campaign['sent'] ) && in_array( $contact['email'], $campaign['sent'] ) )
                     {
                         continue;
@@ -193,6 +201,7 @@ class PCMailer_Send extends PageCarton_Widget
                         $count++;
                         self::sendMail( $toSend );    
                     }
+
                     if( empty( $campaign['sent'] ) )
                     {
                         //	Notify Admin
@@ -209,23 +218,24 @@ class PCMailer_Send extends PageCarton_Widget
 
                     $campaign['sent'][] = $contact['email'];
 
-                    if( count( $campaign['sent'] ) === count( $contacts ) )
-                    {
-                        $campaign['status'] = '2';
-                        
-                        //	Notify Admin
-                        $mailInfo = array();
-                        $mailInfo['subject'] = 'Campaign Completed';
-                        $mailInfo['body'] = 'An email Campaign "' . $campaign['subject'] . '" has been sent successfully to ' . count( $campaign['sent'] ) . ' contacts';
-                        try
-                        {
-                            @Ayoola_Application_Notification::mail( $mailInfo );
-                        }
-                        catch( Ayoola_Exception $e ){ null; }                
-
-                    }
                     PCMailer_Campaign::getInstance()->update( $campaign, array( 'campaign_id' => $campaign['campaign_id'] ) );
                 }
+                if( $contactCount >= count( $contacts ) )
+                {
+                    $campaign['status'] = '2';
+                    
+                    //	Notify Admin
+                    $mailInfo = array();
+                    $mailInfo['subject'] = 'Campaign Completed';
+                    $mailInfo['body'] = 'An email Campaign "' . $campaign['subject'] . '" has been sent successfully to ' . count( $campaign['sent'] ) . ' contacts';
+                    try
+                    {
+                        @Ayoola_Application_Notification::mail( $mailInfo );
+                    }
+                    catch( Ayoola_Exception $e ){ null; }   
+                    PCMailer_Campaign::getInstance()->update( $campaign, array( 'campaign_id' => $campaign['campaign_id'] ) );             
+                }
+
 
                 $this->setViewContent( '<div class="goodnews">"' . $campaign['subject'] . '" sent to ' . $count . ' recipent(s).</div>' );
             }
