@@ -53,8 +53,10 @@ class PCMailer_Campaign_List extends PCMailer_Campaign_Abstract
 		$list->createList
 		(
 			array(
-                    'from' => array( 'field' => 'from', 'value' =>  '%FIELD%', 'filter' =>  '' ), 
+                    //'from' => array( 'field' => 'from', 'value' =>  '%FIELD%', 'filter' =>  '' ), 
                     'subject' => array( 'field' => 'subject', 'value' =>  '%FIELD%', 'filter' =>  '' ), 
+                    array( 'field' => 'sent_count', 'value' =>  '%FIELD% sent' ), 
+                    array( 'field' => 'contact_count', 'value' =>  '%FIELD% contacts' ), 
                     'Status' => array( 'field' => 'status', 'value' =>  '%FIELD%', 'filter' =>  '', 'value_representation' =>  static::$_availableStatuses ), 
                     array( 'field' => 'creation_time', 'value' =>  '%FIELD%', 'filter' =>  'Ayoola_Filter_Time' ), 
                     '<a rel="spotlight;" onClick="ayoola.spotLight.showLinkInIFrame( \'' . Ayoola_Application::getUrlPrefix() . '/tools/classplayer/get/object_name/PCMailer_Campaign_Editor/?' . $this->getIdColumn() . '=%KEY%\', \'page_refresh\' );" href="javascript:">

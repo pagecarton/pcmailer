@@ -160,6 +160,7 @@ class PCMailer_Send extends PageCarton_Widget
 
                 $toSend['body'] = Ayoola_Page_Editor_Text::embedWidget( $toSend['body'], array() );
 
+                $campaign['contact_count'] = count( $contacts );
 
                 $count = 0;
                 $contactCount = 0;
@@ -219,9 +220,11 @@ class PCMailer_Send extends PageCarton_Widget
                     }
 
                     $campaign['sent'][] = $contact['email'];
+                    $campaign['sent_count'] = $contactCount;
 
                     PCMailer_Campaign::getInstance()->update( $campaign, array( 'campaign_id' => $campaign['campaign_id'] ) );
                 }
+
                 if( $contactCount >= count( $contacts ) )
                 {
                     $campaign['status'] = '2';

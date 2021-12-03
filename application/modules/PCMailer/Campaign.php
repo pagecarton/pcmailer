@@ -25,7 +25,7 @@ class PCMailer_Campaign extends PageCarton_Table
      *
      * @param string
      */
-    protected $_tableVersion = '0.9';  
+    protected $_tableVersion = '0.11';  
 
     /**
      * Table data types and declaration
@@ -36,8 +36,11 @@ class PCMailer_Campaign extends PageCarton_Table
 	protected $_dataTypes = array (
   'from' => 'INPUTTEXT',
   'subject' => 'INPUTTEXT',
+  'preview' => 'INPUTTEXT',
   'contacts' => 'JSON',
   'sent' => 'JSON',
+  'sent_count' => 'INT',
+  'contact_count' => 'INT',
   'opened' => 'JSON',
   'clicked' => 'JSON',
   'status' => 'INT',

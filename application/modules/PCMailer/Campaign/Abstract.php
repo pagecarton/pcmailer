@@ -75,10 +75,6 @@ class PCMailer_Campaign_Abstract extends PageCarton_Widget
         //$options = array_combine( array_values( $options ), array_values( $options ) );
         $fieldset->addElement( array( 'name' => 'type', 'type' => 'Select', 'value' => @$values['type'] ), $options ); 
 
-        if( ! empty( $values['type'] ) )
-        {
-            Application_Article_Abstract::initHTMLEditor();
-        }
 
         $fieldset->addElement( array( 'name' => 'from', 'placeholder' => 'e.g. email@example.com', 'type' => 'InputText', 'value' => @$values['from'] ) ); 
 
@@ -93,6 +89,11 @@ class PCMailer_Campaign_Abstract extends PageCarton_Widget
         //$fieldset->addElement( array( 'name' => 'list_id-cx', 'label' => '', 'type' => 'TextArea', 'value' => implode( "\r\n", PCMailer_Send::getContacts( $values['list_id'] ) ) ) ); 
 
         $fieldset->addElement( array( 'name' => 'subject', 'placeholder' => 'Email Subject', 'type' => 'InputText', 'value' => @$values['subject'] ) );
+        if( ! empty( $values['type'] ) )
+        {
+            Application_Article_Abstract::initHTMLEditor();
+            $fieldset->addElement( array( 'name' => 'preview', 'placeholder' => 'Construct a catchy Email Preview text...', 'type' => 'InputText', 'value' => @$values['preview'] ) ); 
+        }
 
         $fieldset->addElement( array( 'name' => 'body', 'placeholder' => 'Enter the body content of your email campaign here...', 'type' => 'TextArea', 'data-document_type' => 'html', 'value' => @$values['body'] ) ); 
         $options = static::$_availableStatuses;

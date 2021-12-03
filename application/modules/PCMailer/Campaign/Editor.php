@@ -52,6 +52,7 @@ class PCMailer_Campaign_Editor extends PCMailer_Campaign_Abstract
            // var_export( $values['list_id'] );
            // var_export( PCMailer_Send::getContacts( $values['list_id'] ) );
             $contacts = $values['contacts'] = PCMailer_Send::getContacts( $values['list_id'] );
+            $values['contact_count'] = count( $contacts );
 
 			if( $this->updateDb( $values ) )
             { 
