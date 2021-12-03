@@ -60,6 +60,8 @@ class PCMailer_Campaign_Editor extends PCMailer_Campaign_Abstract
                 <p class="goodnews">Campaign "' . $data['subject'] . '" updated successfully to send to ' . count( $contacts ) . ' on the selected lists. <a href="' . Ayoola_Application::getUrlPrefix() . '/tools/classplayer/get/name/PCMailer_Preview/?campaign_id=' . $data['campaign_id'] . '" target="preview">Preview Campaign</a></p>
                 <p></p>
                 ', true ); 
+                $this->createForm( 'Save', 'Continue Editing Campaign', $values );
+
                 $this->setViewContent( $this->getForm()->view() );
 
             } 

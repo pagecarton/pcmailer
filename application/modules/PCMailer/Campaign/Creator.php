@@ -51,9 +51,16 @@ class PCMailer_Campaign_Creator extends PCMailer_Campaign_Abstract
 				@Ayoola_Application_Notification::mail( $mailInfo );
 			}
 			catch( Ayoola_Exception $e ){ null; }
+
+            $contacts = $values['contacts'] = PCMailer_Send::getContacts( $values['list_id'] );
+            $values['contact_count'] = count( $contacts );
+
 			if( $this->insertDb( $values ) )
 			{ 
-				$this->setViewContent( '<div class="goodnews">Campaign created successfully. </div>', true ); 
+                $this->setViewContent( '
+                <p class="goodnews">Campaign "' . $value['subject'] . '" created successfully to send to ' . count( $contacts ) . ' on the selected lists.</p>
+                <p></p>
+                ', true ); 
 			}
           
 		}  
