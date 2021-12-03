@@ -71,7 +71,7 @@ class PCMailer_List_Abstract extends PageCarton_Widget
         $options = $options->select();
         $options = $filter->filter( $options );
 
-        $options ? $fieldset->addElement( array( 'name' => 'forms', 'name' => 'Pick Contacts from these forms', 'type' => 'Checkbox', 'value' => @$values['forms'] ), $options ) : null; 
+        $options ? $fieldset->addElement( array( 'name' => 'forms', 'label' => 'Pick Contacts from these forms', 'type' => 'Checkbox', 'value' => @$values['forms'] ), $options ) : null; 
 
                 
         $v = array();
