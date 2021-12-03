@@ -86,7 +86,9 @@ class PCMailer_Send extends PageCarton_Widget
                 {
                     foreach( $data as $each )
                     {
-                        $email = $each['email'] ? : $each['email_address'];
+                        $email = @$each['email'] ? : $each['email_address'];
+                        $email = $email ? : $each['Email'];
+                        $email = $email ? : $each['Email Address'];
                         if( ! empty( $email ) )
                         {
                             $emails[] = $email; 
