@@ -49,8 +49,19 @@ class PCMailer_Campaign_Editor extends PCMailer_Campaign_Abstract
                 @Ayoola_Application_Notification::mail( $mailInfo );
             }
             catch( Ayoola_Exception $e ){ null; }                //  status changed, reset the sent list
+           // var_export( $values['list_id'] );
+           // var_export( PCMailer_Send::getContacts( $values['list_id'] ) );
+            $contacts = $values['contacts'] = PCMailer_Send::getContacts( $values['list_id'] );
 
-			if( $this->updateDb( $values ) ){ $this->setViewContent( '<div class="goodnews">Data updated successfully</div>', true ); } 
+			if( $this->updateDb( $values ) )
+            { 
+                $this->setViewContent( '
+                <p class="goodnews">Campaign "' . $data['subject'] . '" updated successfully to send to ' . count( $contacts ) . ' on the selected lists. <a href="' . Ayoola_Application::getUrlPrefix() . '/tools/classplayer/get/name/PCMailer_Preview/?campaign_id=' . $data['campaign_id'] . '" target="preview">Preview Campaign</a></p>
+                <p></p>
+                ', true ); 
+                $this->setViewContent( $this->getForm()->view() );
+
+            } 
 
              // end of widget process
           

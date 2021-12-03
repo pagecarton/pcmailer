@@ -46,3 +46,4 @@ application/databases/Ayoola/Access/localuser.xml
 application/databases/PageCarton/MultiSite/*
 application/databases/PageCarton/MultiSite/table.xml
 application/databases/PageCarton/MultiSite/*
+extensions/*

@@ -39,11 +39,17 @@ class PCMailer_Send extends PageCarton_Widget
      */
 	public static function getContacts( $listId )
     {
-        $contacts = PCMailer_Contact::getInstance()->select( null, array( 'list_id' => $listId ) );
+        $where = array( 'list_id' => $listId );
+        if( empty( $listId ) || $listId === array( '' )  )
+        {
+            $where = array();
+        }
+        $contacts = PCMailer_Contact::getInstance()->select( null, $where );
 
         $emails = array();
 
-        $lists = PCMailer_List::getInstance()->select( null, array( 'list_id' => $listId ) );
+        $lists = PCMailer_List::getInstance()->select( null, $where );
+
         foreach( $lists as $listInfo )
         {
             if( ! empty( $listInfo['products'] ) )
@@ -73,9 +79,10 @@ class PCMailer_Send extends PageCarton_Widget
     
                 }
             }
+
             if( ! empty( $listInfo['forms'] ) )
             {
-                if( $data = Ayoola_Form_Table_Data::getInstance()->select( null, array( 'form_name' => $listInfo['forms'] ) ) )
+                if( $data = Ayoola_Form_Table_Data::getInstance()->select( 'form_data', array( 'form_name' => $listInfo['forms'] ) ) )
                 {
                     foreach( $data as $each )
                     {
@@ -142,7 +149,6 @@ class PCMailer_Send extends PageCarton_Widget
                     continue;
                 }
                 $contacts = $campaign['contacts'] = $campaign['contacts'] ? : self::getContacts( $campaign['list_id'] );
-
                 $campaign['sent'] = is_array( $campaign['sent'] ) ? $campaign['sent'] : array();
                 $toSend['body'] = Ayoola_Page_Editor_Text::addDomainToAbsoluteLinks( $toSend['body'] );
 

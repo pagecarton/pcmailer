@@ -59,7 +59,7 @@ class PCMailer_Contact_List extends PCMailer_Contact_Abstract
                  //   'confirmed' => array( 'field' => 'confirmed', 'value' =>  '%FIELD%', 'filter' =>  '' ), 
                  //   'list_id' => array( 'field' => 'list_id', 'value' =>  '%FIELD%', 'filter' =>  '' ), 
                  //   'unsubscribed' => array( 'field' => 'unsubscribed', 'value' =>  '%FIELD%', 'filter' =>  '' ), 
-                    'bounced' => array( 'field' => 'bounced', 'value' =>  '%FIELD%', 'filter' =>  '' ), 
+                 //   'bounced' => array( 'field' => 'bounced', 'value' =>  '%FIELD%', 'filter' =>  '' ), 
                     'Added' => array( 'field' => 'creation_time', 'value' =>  '%FIELD%', 'filter' =>  'Ayoola_Filter_Time' ), 
                     '' => '%FIELD% <a style="font-size:smaller;" rel="shadowbox;changeElementId=' . $this->getObjectName() . '" href="' . Ayoola_Application::getUrlPrefix() . '/tools/classplayer/get/object_name/PCMailer_Contact_Editor/?' . $this->getIdColumn() . '=%KEY%"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>', 
                     ' ' => '%FIELD% <a style="font-size:smaller;" rel="shadowbox;changeElementId=' . $this->getObjectName() . '" href="' . Ayoola_Application::getUrlPrefix() . '/tools/classplayer/get/object_name/PCMailer_Contact_Delete/?' . $this->getIdColumn() . '=%KEY%"><i class="fa fa-trash" aria-hidden="true"></i></a>', 
