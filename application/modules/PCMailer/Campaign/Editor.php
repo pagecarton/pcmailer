@@ -37,6 +37,7 @@ class PCMailer_Campaign_Editor extends PCMailer_Campaign_Abstract
             {
                 $values['sent'] = array();
                 $values['contacts'] = array();
+                $campaign['sent_count'] = 0;
             }
             //	Notify Admin
             $mailInfo = array();
