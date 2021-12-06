@@ -46,7 +46,7 @@ class PCMailer_Campaign_Editor extends PCMailer_Campaign_Abstract
             ';
             try
             {
-                @Ayoola_Application_Notification::mail( $mailInfo );
+                //@Ayoola_Application_Notification::mail( $mailInfo );
             }
             catch( Ayoola_Exception $e ){ null; }                //  status changed, reset the sent list
            // var_export( $values['list_id'] );
