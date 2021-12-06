@@ -58,7 +58,7 @@ class PCMailer_Campaign_Creator extends PCMailer_Campaign_Abstract
 			if( $this->insertDb( $values ) )
 			{ 
                 $this->setViewContent( '
-                <p class="goodnews">Campaign "' . $value['subject'] . '" created successfully to send to ' . count( $contacts ) . ' on the selected lists.</p>
+                <p class="goodnews">Campaign "' . $values['subject'] . '" created successfully to send to ' . count( $contacts ) . ' on the selected lists.</p>
                 <p></p>
                 ', true ); 
 			}
