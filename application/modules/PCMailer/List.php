@@ -17,7 +17,7 @@
  */
 
 
-class PCMailer_List extends PageCarton_Table
+class PCMailer_List extends PageCarton_Table_Private
 {
 
     /**

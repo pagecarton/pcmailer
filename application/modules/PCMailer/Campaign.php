@@ -17,7 +17,7 @@
  */
 
 
-class PCMailer_Campaign extends PageCarton_Table
+class PCMailer_Campaign extends PageCarton_Table_Private
 {
 
     /**
