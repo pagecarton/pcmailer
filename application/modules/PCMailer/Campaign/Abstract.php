@@ -92,8 +92,8 @@ class PCMailer_Campaign_Abstract extends PageCarton_Widget
         if( ! empty( $values['type'] ) )
         {
             Application_Article_Abstract::initHTMLEditor();
-            $fieldset->addElement( array( 'name' => 'preview', 'placeholder' => 'Construct a catchy Email Preview text...', 'type' => 'InputText', 'value' => @$values['preview'] ) ); 
         }
+        $fieldset->addElement( array( 'name' => 'preview', 'placeholder' => 'Construct a catchy Email Preview text...', 'type' => 'InputText', 'value' => @$values['preview'] ) ); 
 
         $fieldset->addElement( array( 'name' => 'body', 'placeholder' => 'Enter the body content of your email campaign here...', 'type' => 'TextArea', 'data-document_type' => 'html', 'value' => @$values['body'] ) ); 
         $options = static::$_availableStatuses;
